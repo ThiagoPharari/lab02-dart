@@ -12,6 +12,12 @@ class Profesor {
   String toString() {
     return 'Dni: $dni, Nombre: $nombre, Sueldo Bruto: $sueldobruto'; // 
   }
+  
+  // prueba de función
+  String calcularsueldo() {
+    var sueldoneto = sueldobruto! - (sueldobruto! * 0.08);
+    return 'El sueldo neto de $nombre es:  $sueldoneto'; 
+  }
 }
 
 void main() {
@@ -32,6 +38,9 @@ void main() {
   print(teobaldo.sueldobruto);
   print(teobaldo.toString()); // 
   
+  // prueba de función
+  print(teobaldo.calcularsueldo()); 
+  print(gomez.calcularsueldo()); 
   
   var sueldofinalgomez = gomez.sueldobruto! - (gomez.sueldobruto! * 0.08);
   print ('El sueldo neto de Gomez es: $sueldofinalgomez');
